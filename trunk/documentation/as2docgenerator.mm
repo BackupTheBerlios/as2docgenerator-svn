@@ -21,7 +21,8 @@
 <node TEXT="methods">
 <node TEXT="method">
 <node TEXT="attr. name" STYLE="fork"/>
-<node TEXT="attr. visibility" STYLE="fork"/>
+<node TEXT="attr. visibility (public|private)" STYLE="fork"/>
+<node TEXT="attr. modifier (static)" STYLE="fork"/>
 <node TEXT="attr. returnType" STYLE="fork"/>
 <node TEXT="params">
 <node TEXT="param">
