@@ -1,0 +1,169 @@
+
+		<HTML>
+		<HEAD>
+		<TITLE>StringTokenizer  Documentation</TITLE>
+		
+		<STYLE><!--
+		HR.small{height:1px; width:100%; background:#E7BFA3; border: 0px;}
+		HR.big{height:4px; width:100%; background:#E7BFA3; border: 0px;}
+		A:hover{text-decoration: underline}
+		A{text-decoration: none; color: #993333}
+		code{font-family:monospace; font-size: 12px; color: #666666;}
+		.methodAttributesTitle{font-size: 12px; font-weight: bold; color: #7B779C}
+		.ToC{font-size: 12px; font-weight: bold; color: #993333}
+		.methodTitle{font-size: 14px; font-weight: bold; color: #993333}
+		.groupTitle{font-size: 18px; font-weight: bold; color: #993333}
+		.sectionTitle{font-size: 22px; font-weight: bold; color: #993333}
+		.majorTitle{font-size: 32px; font-weight: bold; color: #993333; padding-bottom:100px;}
+		.methodsDiv{margin-left:40px;}
+		.footer{font-size: 11px; color: #666666;}
+		body{font-family: arial,sans-serif; font-size: 12px;}
+		//--></STYLE>
+		
+		</HEAD>
+		<BODY bgColor='white'>
+		<P class='majorTitle'>StringTokenizer Documentation</P>
+		
+
+		<P><B>Author:</B> Joe Coder<BR>
+		<B>Last Modified:</B> 07/27/04 22:04:42<HR class='big'>
+
+		<P class='sectionTitle'>Summary</P>
+		<P class='ToC'>StringTokenizer interface:</P>
+		<div class='methodsDiv'><a href='#classinfo'>- description</a></div>
+<P class='ToC'>StringTokenizer Properties:</P><div class='methodsDiv'>
+<a href='#anotherProp'>- anotherProp</a><br>
+<a href='#someProp'>- someProp</a><br>
+<a href='#otherProp'>- otherProp</a><br>
+<a href='#yetAnotherProp'>- yetAnotherProp</a><br>
+</div><br>
+<P class='ToC'>StringTokenizer Methods:</P><div class='methodsDiv'>
+<a href='#hasMoreTokens'>- hasMoreTokens</a><br>
+<a href='#nextToken'>- nextToken</a><br>
+<a href='#countTokens'>- countTokens</a><br>
+</div><br>
+
+		<HR class='big'>
+		<P class='sectionTitle'><A name='classinfo'></A>StringTokenizer <I>interface</I></P>
+		<P> <span class='methodTitle'>version:</span> 0.5</P>
+		<P class="methodTitle">description:</P>
+		<P>Implements the behaviour of Java StringTokenizer Class<p>
+		Constructs a string tokenizer for the specified string. The
+		characters in the <code>delim</code> argument are the delimiters
+		for separating tokens. Delimiter characters themselves will not
+		be treated as tokens.
+
+		The set of delimiters (the characters that separate tokens) may
+		be specified either at creation time or on a per-token basis.
+		<p>
+		A <tt>StringTokenizer</tt> object internally maintains a current
+		position within the string to be tokenized. Some operations advance this
+		current position past the characters processed.<p>
+		A token is returned by taking a substring of the string that was used to
+		create the <tt>StringTokenizer</tt> object.
+		<p>
+		The following is one example of the use of the tokenizer. The code:
+		<blockquote><pre>
+		st:StringTokenizer  = new StringTokenizer("this is a test");
+		while (st.hasMoreTokens()) {
+			trace(st.nextToken());
+		}
+		</pre></blockquote>
+		<p>
+		prints the following output:
+		<blockquote><pre>
+		this
+		is
+		a
+		test
+		</pre></blockquote>
+</P>
+		<P class="methodTitle">usage:</P> <pre>myTokenizer = new StringTokenizer(str[, delim])</pre>
+
+<P> <span class='methodTitle'>parameters:</span>
+				<ul> 
+<li>  str  (String)   a string to be parsed.</li>
+<li>  delim (String)  the delimiters.</li>
+</ul>
+<p><a href='#'>back to top</a></p>
+
+			<HR class='small'>
+			<P class='groupTitle'><A name='properties'></A>StringTokenizer Properties:</P>
+			<div class='methodsDiv' >
+			
+
+				<P class='methodTitle'><A name='anotherProp'></A><u> anotherProp</u></P>
+				<P> No description provided.</P>
+
+				<P class='methodTitle'><A name='someProp'></A><u> someProp</u></P>
+				<P> (String) Not sure what's it for.</P>
+
+				<P class='methodTitle'><A name='otherProp'></A><u> otherProp</u></P>
+				<P> (Number) Not sure either. Looks nice, though.</P>
+
+				<P class='methodTitle'><A name='yetAnotherProp'></A><u> yetAnotherProp</u></P>
+				<P> (Object) plain Object. really useless.</P>
+<p><a href='#'>back to top</a></p>
+</div>
+
+			<HR class='small'>
+			<P class='groupTitle'><A name='methods'></A>StringTokenizer Methods:</P>
+			<div class='methodsDiv' >
+			
+
+				<P class='methodTitle'><A name='hasMoreTokens'></A><u> hasMoreTokens</u></P>
+				<P><span class='methodAttributesTitle'>description: </span>
+				Tests if there are more tokens available from this tokenizer's string.
+			If this method returns <tt>true</tt>, then a subsequent call to
+			<tt>nextToken</tt> with no argument will successfully return a token.
+	</P>
+				<P><span class='methodAttributesTitle'>usage:</span> <code>StringTokenizer.hasMoreTokens()</code>
+	</P>
+<P><span class='methodAttributesTitle'>returns:</span> <code>true</code> if and only if there is at least one token
+	in the string after the current position; <code>false</code>
+	otherwise.
+	</P>
+<p><a href='#'>back to top</a></p>
+
+				<P class='methodTitle'><A name='nextToken'></A><u> nextToken</u></P>
+				<P><span class='methodAttributesTitle'>description: </span>
+				Returns the next token in this string tokenizer's string. First,
+			the set of characters considered to be delimiters by this
+			<tt>StringTokenizer</tt> object is changed to be the characters in
+			the string <tt>delim</tt>. Then the next token in the string
+			after the current position is returned. The current position is
+			advanced beyond the recognized token.  The new delimiter set
+			remains the default after this call.
+	</P>
+				<P><span class='methodAttributesTitle'>usage:</span> <code>StringTokenizer.nextToken(delim)</code>
+	</P>
+<P> <span class='methodAttributesTitle'>parameters:</span><ul>
+<li>delim (String) the new delimiters.</li>
+</ul></P>
+<P> <span class='methodAttributesTitle'>throws:</span> NoSuchElementError  if there are no more tokens in this
+	tokenizer's string.
+	</P>
+<P><span class='methodAttributesTitle'>returns:</span> String - The next token after switching to the new delimiter set.
+	</P>
+<p><a href='#'>back to top</a></p>
+
+				<P class='methodTitle'><A name='countTokens'></A><u> countTokens</u></P>
+				<P><span class='methodAttributesTitle'>description: </span>
+				Calculates the number of times that this tokenizer's
+			<code>nextToken</code> method can be called before it generates an
+			exception. The current position is not advanced.
+	</P>
+				<P><span class='methodAttributesTitle'>usage:</span> <code>StringTokenizer.countTokens()</code>
+	</P>
+<P><span class='methodAttributesTitle'>returns:</span> Number - tokens remaining in the string using the current delimiter set.
+	</P>
+<p><a href='#'>back to top</a></p>
+</div>
+
+			<BR>
+			<BR>
+			<HR class='big'>
+			<span class="footer">generated with <A href='http://blog.klaustrofobik.org/' target='_blank'>AS2docGenerator beta 0.5.3</A></span>
+			</BODY>
+			</HTML>
+			
